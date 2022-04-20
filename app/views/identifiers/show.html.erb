@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ccs:</strong>
+  <%= @identifier.ccs_id %>
+</p>
+
+<p>
+  <strong>Id type:</strong>
+  <%= @identifier.id_type %>
+</p>
+
+<p>
+  <strong>Ccs persisted:</strong>
+  <%= @identifier.ccs_persisted %>
+</p>
+
+<%= link_to 'Edit', edit_identifier_path(@identifier) %> |
+<%= link_to 'Back', identifiers_path %>
