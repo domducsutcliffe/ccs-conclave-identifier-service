@@ -12,6 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2022_04_19_163205) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "postgis"
+
   create_table "identifiers", force: :cascade do |t|
     t.string "ccs_id"
     t.string "id_type"

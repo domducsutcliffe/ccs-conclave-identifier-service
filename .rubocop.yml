@@ -18,10 +18,7 @@ AllCops:
     - 'config/puma.rb'
     - 'config/environments/*'
     - 'config/**/*'
-    - 'spec/fixtures/**/*'
-    - '.git/**/*'
-    - 'bin/*'
-    TargetRubyVersion: 3.0.0
+    - 'Gemfile'
 Rails:
     Enabled: true
 

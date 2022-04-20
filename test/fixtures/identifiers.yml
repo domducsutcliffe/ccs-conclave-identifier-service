@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  ccs_id: MyString
-  id_type: MyString
+  ccs_id: CCS-123456
+  id_type: conclave
   ccs_persisted: false
 
 two:
-  ccs_id: MyString
-  id_type: MyString
+  ccs_id: CCS-111111
+  id_type: conclave
   ccs_persisted: false

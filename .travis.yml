@@ -4,12 +4,12 @@ rvm:
  — 3.0.0
 env:
   matrix:
-    - API_ROOT=$deploy_api_uri
+    - API_ROOT=$API_ENDPOINT
   global:
     - RAILS_ENV=test
-    - CF_USER=$deploy_username
-    - CF_ORG=$deploy_org_name
-    - CF_PASS=$deploy_password
+    - CF_USER=$DEPLOY_USERNAME
+    - CF_ORG=$DEPLOY_ORG
+    - CF_PASS=$DEPLOY_PASSWORD
     - CC_TEST_REPORTER_ID=$CC_TEST_REPORTER_ID
     - CF_SPACE=$SPACE
 services:
@@ -40,6 +40,6 @@ deploy:
     script: bash CF/deploy-app.sh -u $CF_USER -o $CF_ORG -p $CF_PASS -s $CF_SPACE
     on:
       all_branches: true
-      condition: $SPACE =~ ^(development|testing|integration|uat|pre-production|sandbox|production)$
+      condition: $SPACE =~ ^(sandbox|development|testing|production)$
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT

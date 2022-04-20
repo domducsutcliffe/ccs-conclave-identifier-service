@@ -74,7 +74,7 @@ then
   then
     if [[ ! "$BRANCH" == "sandbox" ]]
     then
-      echo "We only deploy the 'develop' branch to the $CF_SPACE cf space"
+      echo "We only deploy the 'sandbox' branch to the $CF_SPACE cf space"
       echo "if you want to deploy $BRANCH to $CF_SPACE use -f"
       exit 1
     fi
@@ -94,7 +94,17 @@ then
   then
     if [[ ! "$BRANCH" == "testing" ]]
     then
-      echo "We only deploy the 'staging' branch to the $CF_SPACE cf space"
+      echo "We only deploy the 'testing' branch to the $CF_SPACE cf space"
+      echo "if you want to deploy $BRANCH to $CF_SPACE use -f"
+      exit 1
+    fi
+  fi
+
+  if [[ "$CF_SPACE" == "production" ]]
+  then
+    if [[ ! "$BRANCH" == "main" ]]
+    then
+      echo "We only deploy the 'production' branch to the $CF_SPACE cf space"
       echo "if you want to deploy $BRANCH to $CF_SPACE use -f"
       exit 1
     fi
