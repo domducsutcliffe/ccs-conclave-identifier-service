@@ -79,8 +79,8 @@ For help or guidance in downloading and running the application, see the followi
 <br>
 
 #### Prerequisites
-[You must have npm (node package manager) and Nodejs installed on your system.](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-[You must also have rails installed on your system.](https://guides.rubyonrails.org/v5.0/getting_started.html)
+[You must have npm (node package manager) and Nodejs installed on your system.](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)<br>
+[You must also have rails installed on your system.](https://guides.rubyonrails.org/v5.0/getting_started.html)<br>
 [Finally, you must have postgresql installed on your system.](https://www.postgresql.org)
 
 <br>

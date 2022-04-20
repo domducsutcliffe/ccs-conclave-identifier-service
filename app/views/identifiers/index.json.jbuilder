@@ -1,1 +1,1 @@
-json.array! @identifiers, partial: "identifiers/identifier", as: :identifier
+json.array! @identifiers, partial: 'identifiers/identifier', as: :identifier
