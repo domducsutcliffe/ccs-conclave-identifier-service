@@ -134,6 +134,7 @@ Below is a planned roadmap. See [open issues][issues-url] for any other proposed
 |:---|:---|:---|:---|
 | 0.0.1 | 2022-04-20 | #1 | <ul><li>Initial Developer Commit.</li><li>Add initial directory structure and files.</li><li>Update README.md</li></ul> |
 | 0.0.2 | 2022-04-21 | #2 | <ul><li>Tidy up unnecessary repo files.</li><li>Update README.md</li></ul> |
+| 0.0.3 | 2022-04-21 | #3 | <ul><li>Update ruby version to fix buildpack issue on CF delpoy.</li><li>Update README.md</li></ul> |
 
 <br><hr><br>
 
