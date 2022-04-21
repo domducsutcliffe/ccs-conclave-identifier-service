@@ -130,9 +130,10 @@ Below is a planned roadmap. See [open issues][issues-url] for any other proposed
 <!-- CHANGELOG -->
 ## Changelog
 
-| Version | Date | Changes |
-|:---|:---|:---|
-| 0.0.1 | 2022-04-20 | <ul><li>Initial Developer Commit.</li><li>Add initial directory structure and files.</li><li>Update README.md</li></ul> |
+| Version | Date | Pull Request Number | Changes Description |
+|:---|:---|:---|:---|
+| 0.0.1 | 2022-04-20 | #1 | <ul><li>Initial Developer Commit.</li><li>Add initial directory structure and files.</li><li>Update README.md</li></ul> |
+| 0.0.2 | 2022-04-21 | #2 | <ul><li>Tidy up unnecessary repo files.</li><li>Update README.md</li></ul> |
 
 <br><hr><br>
 

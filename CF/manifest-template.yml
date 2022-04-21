@@ -8,8 +8,5 @@ applications:
   random-route: true
   routes:
     - route: conclave-identifier-service-CF_SPACE.apps.internal
-  services:
-    - postgres-service-CF_SPACE
-    - rollbar-service-CF_SPACE
   env:
     SERVER_ENV_NAME: ENV
