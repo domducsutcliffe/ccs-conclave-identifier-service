@@ -10,7 +10,6 @@ env:
     - CF_USER=$DEPLOY_USERNAME
     - CF_ORG=$DEPLOY_ORG
     - CF_PASS=$DEPLOY_PASSWORD
-    - CC_TEST_REPORTER_ID=$CC_TEST_REPORTER_ID
     - CF_SPACE=$SPACE
 services:
   - postgresql
@@ -20,11 +19,8 @@ install: bundle install --jobs=3 --retry=3
 before_script:
   - sudo apt-get -qq update
   - sudo apt-get install -y postgresql-11-postgis-2.5
-  - psql -U postgres -c 'create database cii_test'
-  - psql -U postgres -d cii_test -c 'create extension postgis'
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
+  - psql -U postgres -c 'create database ccs-conclave-identifier-service_test'
+  - psql -U postgres -d ccs-conclave-identifier-service_test -c 'create extension postgis'
 script:
   - bundle exec rake db:setup
   - bundle exec rake
@@ -40,6 +36,4 @@ deploy:
     script: bash CF/deploy-app.sh -u $CF_USER -o $CF_ORG -p $CF_PASS -s $CF_SPACE
     on:
       all_branches: true
-      condition: $SPACE =~ ^(sandbox|development|testing|production)$
-after_script:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+      condition: $SPACE =~ ^(ppon-development|ppon-testing|ppon-pre-production|ppon-production)$
