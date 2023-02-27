@@ -38,11 +38,12 @@ def initialize_env_vars(ssm_client)
         end
 
         params_list.each do |param| params_list.any?
-            param_name = param[:name].split('/')[param[:name].split('/').count - 1].to_s
+            next unless param[:name].to_s.downcase.includes('identifier-service')
 
             # Here we are getting AWS Key/Value pair and assign to environment variables, one by one.
             # E.g. ENV['PARAMTER'] = 'ABC1234...'
             param_val = ssm_client.get_parameter({ name: param[:name], with_decryption: true })[:parameter][:value].to_s
+            param_name = param[:name].split('/')[param[:name].split('/').count - 1].to_s
             ENV[param_name] = param_val
 
             rescue StandardError => e
