@@ -1,0 +1,12 @@
+---
+applications:
+- name: conclave-identifier-service-CF_SPACE
+  memory: 512M
+  buildpacks:
+    - https://github.com/cloudfoundry/ruby-buildpack.git
+  instances: 1
+  random-route: true
+  routes:
+    - route: conclave-identifier-service-CF_SPACE.apps.internal
+  env:
+    SERVER_ENV_NAME: ENV

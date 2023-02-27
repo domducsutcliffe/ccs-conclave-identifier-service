@@ -1,0 +1,32 @@
+<%= form_with(model: identifier, local: true) do |form| %>
+  <% if identifier.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(identifier.errors.count, "error") %> prohibited this identifier from being saved:</h2>
+
+      <ul>
+        <% identifier.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ccs_id %>
+    <%= form.text_field :ccs_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id_type %>
+    <%= form.text_field :id_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ccs_persisted %>
+    <%= form.check_box :ccs_persisted %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
