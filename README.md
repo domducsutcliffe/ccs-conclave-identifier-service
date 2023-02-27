@@ -12,7 +12,7 @@
 <br>
 <div align="center">
   <a href="https://github.com/Crown-Commercial-Service">
-    Crown-Commercial-Service
+    Crown-Commercial-Service :)
   </a><br><br>
   <div align="center"><h1>Conclave Identifier Service</h1>A ruby rails powered API</div>
   <div align="right">
