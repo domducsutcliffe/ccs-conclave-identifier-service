@@ -2,45 +2,18 @@ class ConclaveIdentifiersController < ActionController::API
   before_action :validate_params
 
   def index
-    render_response(response_payload, 201)
-  end
-
-  def response_payload(count = 1)
-    n = 0
-    identifiers = []
-    count = request.query_parameters['count'].to_i if request.query_parameters.present?
-
-    while n < count
-      id = generate_id
-      identifiers << {
-        id: "CCS-#{id}",
-        id_type: 'conclave',
-        persisted: false
-      }
-
-      Identifier.new(ccs_id: "CCS-#{id}", id_type: 'conclave', ccs_persisted: false).save
-      n += 1
-    end
-
-    { identifiers: identifiers }
+    render_response({ response: 'OK' }, 200)
   end
 
   def generate_id
-    id = ''
-
-    loop do
-      id = ApplicationHelper::IdentifiersHelper.generate_id
-      result = Identifier.where(ccs_id: "CCS-#{id}")
-      break if result.count.zero? && id.to_s.length == 6
-    end
-
-    return id if id
+    "AA1111AA1"
   end
 
   def validate_params
+    params[:id_type] = params[:id_type].to_s.downcase
     return if request.query_parameters.blank?
 
-    render_response({ error: 'bad_request' }, 400) if request.query_parameters['count'].blank? || request.query_parameters['count'].to_i < 1
+    render_response({ response: 'Bad Request' }, 400) if request.query_parameters.present? || params.blank?
   end
 
   def render_response(payload, status_code)
