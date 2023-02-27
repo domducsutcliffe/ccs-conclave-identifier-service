@@ -19,6 +19,7 @@ AllCops:
     - 'config/environments/*'
     - 'config/**/*'
     - 'Gemfile'
+    - 'ppon_id_script.py'
 Rails:
     Enabled: true
 
