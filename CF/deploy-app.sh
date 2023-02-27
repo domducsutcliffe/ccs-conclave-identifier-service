@@ -70,9 +70,9 @@ echo "INFO: deploying $BRANCH to $CF_SPACE"
 if [[ ! "$FORCE" == "yes" ]]
 then
 
-  if [[ "$CF_SPACE" == "sandbox" ]]
+  if [[ "$CF_SPACE" == "ppon-development" ]]
   then
-    if [[ ! "$BRANCH" == "sandbox" ]]
+    if [[ ! "$BRANCH" == "develop" ]]
     then
       echo "We only deploy the 'sandbox' branch to the $CF_SPACE cf space"
       echo "if you want to deploy $BRANCH to $CF_SPACE use -f"
@@ -80,9 +80,9 @@ then
     fi
   fi
 
-  if [[ "$CF_SPACE" == "development" ]]
+  if [[ "$CF_SPACE" == "ppon-testing" ]]
   then
-    if [[ ! "$BRANCH" == "develop" ]]
+    if [[ ! "$BRANCH" == "testing" ]]
     then
       echo "We only deploy the 'develop' branch to the $CF_SPACE cf space"
       echo "if you want to deploy $BRANCH to $CF_SPACE use -f"
@@ -90,9 +90,9 @@ then
     fi
   fi
 
-  if [[ "$CF_SPACE" == "testing" ]]
+  if [[ "$CF_SPACE" == "ppon-pre-production" ]]
   then
-    if [[ ! "$BRANCH" == "testing" ]]
+    if [[ ! "$BRANCH" == "preproduction" ]]
     then
       echo "We only deploy the 'testing' branch to the $CF_SPACE cf space"
       echo "if you want to deploy $BRANCH to $CF_SPACE use -f"
@@ -100,7 +100,7 @@ then
     fi
   fi
 
-  if [[ "$CF_SPACE" == "production" ]]
+  if [[ "$CF_SPACE" == "ppon-production" ]]
   then
     if [[ ! "$BRANCH" == "main" ]]
     then
@@ -129,4 +129,3 @@ cd .. || exit
 
 # CF Push
 cf push conclave-identifier-service-"$CF_SPACE" -f CF/"$CF_SPACE".manifest.yml
-
