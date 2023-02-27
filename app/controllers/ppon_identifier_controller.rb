@@ -1,16 +1,17 @@
-class ConclaveIdentifiersController < ActionController::API
+require_relative '../../helpers/application_helper'
+
+class PponIdentifierController < ActionController::API
   before_action :validate_params
 
   def index
     render_response({ response: 'OK' }, 200)
   end
 
-  def generate_id
-    "AA1111AA1"
+  def return_a_ppon_id
+    return Helpers::ApplicationHelper.generate_specific_ppon_id(0)
   end
 
   def validate_params
-    params[:id_type] = params[:id_type].to_s.downcase
     return if request.query_parameters.blank?
 
     render_response({ response: 'Bad Request' }, 400) if request.query_parameters.present? || params.blank?

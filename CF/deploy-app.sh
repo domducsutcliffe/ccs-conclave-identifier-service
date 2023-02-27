@@ -70,9 +70,9 @@ echo "INFO: deploying $BRANCH to $CF_SPACE"
 if [[ ! "$FORCE" == "yes" ]]
 then
 
-  if [[ "$CF_SPACE" == "sandbox" ]]
+  if [[ "$CF_SPACE" == "ppon-development" ]]
   then
-    if [[ ! "$BRANCH" == "sandbox" ]]
+    if [[ ! "$BRANCH" == "develop" ]]
     then
       echo "We only deploy the 'sandbox' branch to the $CF_SPACE cf space"
       echo "if you want to deploy $BRANCH to $CF_SPACE use -f"
@@ -80,9 +80,9 @@ then
     fi
   fi
 
-  if [[ "$CF_SPACE" == "development" ]]
+  if [[ "$CF_SPACE" == "ppon-testing" ]]
   then
-    if [[ ! "$BRANCH" == "develop" ]]
+    if [[ ! "$BRANCH" == "testing" ]]
     then
       echo "We only deploy the 'develop' branch to the $CF_SPACE cf space"
       echo "if you want to deploy $BRANCH to $CF_SPACE use -f"
@@ -90,9 +90,9 @@ then
     fi
   fi
 
-  if [[ "$CF_SPACE" == "testing" ]]
+  if [[ "$CF_SPACE" == "ppon-pre-production" ]]
   then
-    if [[ ! "$BRANCH" == "testing" ]]
+    if [[ ! "$BRANCH" == "preproduction" ]]
     then
       echo "We only deploy the 'testing' branch to the $CF_SPACE cf space"
       echo "if you want to deploy $BRANCH to $CF_SPACE use -f"
@@ -100,7 +100,7 @@ then
     fi
   fi
 
-  if [[ "$CF_SPACE" == "production" ]]
+  if [[ "$CF_SPACE" == "ppon-production" ]]
   then
     if [[ ! "$BRANCH" == "main" ]]
     then
@@ -112,7 +112,7 @@ then
 fi
 
 # Set environment variables to be fed into manifest.yml file, that is generated.
-ENV="$CF_SPACE"
+CF_ENV="$CF_SPACE"
 
 # ...
 cd "$SCRIPT_PATH" || exit
@@ -122,11 +122,10 @@ cf login -u "$CF_USER" -p "$CF_PASS" -o "$CF_ORG" -a "$CF_API_ENDPOINT" -s "$CF_
 cf target -o "$CF_ORG" -s "$CF_SPACE"
 
 # generate manifest and add
-sed "s/CF_SPACE/$CF_SPACE/g" manifest-template.yml | sed "s/ENV/$ENV/g" > "$CF_SPACE.manifest.yml"
+sed "s/CF_SPACE/$CF_SPACE/g" manifest-template.yml | sed "s/CF_ENV/$CF_ENV/g" > "$CF_SPACE.manifest.yml"
 
 # push API
 cd .. || exit
 
 # CF Push
 cf push conclave-identifier-service-"$CF_SPACE" -f CF/"$CF_SPACE".manifest.yml
-
