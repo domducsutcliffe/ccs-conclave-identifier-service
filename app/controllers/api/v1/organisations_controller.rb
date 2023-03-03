@@ -27,7 +27,7 @@ module Api
             private
 
             def organisation_params
-                params.permit(:ORG_ID)
+                params.permit(:id)
             end
         end
     end 
