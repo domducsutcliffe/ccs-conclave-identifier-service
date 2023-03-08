@@ -38,7 +38,7 @@ def initialize_env_vars(ssm_client)
         end
 
         params_list.each do |param| params_list.any?
-            next unless param[:name].to_s.downcase.includes('identifier-service')
+            next unless param[:name].to_s.downcase.include?('identifier-service')
 
             # Here we are getting AWS Key/Value pair and assign to environment variables, one by one.
             # E.g. ENV['PARAMTER'] = 'ABC1234...'
