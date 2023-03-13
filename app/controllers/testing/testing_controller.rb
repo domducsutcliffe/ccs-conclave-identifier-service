@@ -1,5 +1,5 @@
 require_relative '../../helpers/application_helper'
-
+#To be fixed.
 module Testing
   class TestingController < ActionController::API
 
