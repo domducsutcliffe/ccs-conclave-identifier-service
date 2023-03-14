@@ -97,8 +97,6 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.14.2-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.14.2-x86_64-linux)
-      racc (~> 1.4)
     pg (1.4.6)
     puma (4.3.12)
       nio4r (~> 2.0)
@@ -167,7 +165,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   listen (~> 3.2)
-  pg
+  pg (~> 1.1)
   puma (~> 4.1)
   rails (~> 6.0.6, >= 6.0.6.1)
   spring
