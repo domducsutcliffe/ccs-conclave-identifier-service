@@ -26,26 +26,7 @@
 # Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
-
-/public/assets
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-tmp/pids/.keep
-.env.local
-.vscode/settings.json
-config/credentials.yml.enc
-/public/packs
-/public/packs-test
-/node_modules
-/yarn-error.log
-yarn-debug.log*
-.yarn-integrity
-
-# Ignore test coverage files
-coverage/*
-
-# Ignore travis generated files, or files that are updated during the pipeline but dont need to be pushed to github/CF
-vendor/bundle/
-CF/*.manifest.yml
