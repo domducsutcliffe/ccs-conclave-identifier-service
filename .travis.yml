@@ -6,7 +6,6 @@ env:
   matrix:
     - API_ROOT=$API_ENDPOINT
   global:
-    - RAILS_ENV=test
     - CF_USER=$DEPLOY_USERNAME
     - CF_ORG=$DEPLOY_ORG
     - CF_PASS=$DEPLOY_PASSWORD
@@ -18,7 +17,6 @@ addons:
 install: bundle install --jobs=3 --retry=3
 before_script:
   - sudo apt-get -qq update
-  - psql -U postgres -c 'create database idService_test'
 script:
   - bundle exec rake db:setup
   - bundle exec rake
