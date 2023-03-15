@@ -7,10 +7,12 @@ ruby '3.0.3'
 gem 'rails', '~> 6.0.6', '>= 6.0.6.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
-gem 'pg', '~> 1.1'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
-#Postgres
+#Postgres DB
+gem 'activerecord-postgis-adapter'
+gem 'pg', '~> 1.1'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
@@ -25,7 +27,10 @@ gem 'puma', '~> 4.1'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+gem 'rack-cors'
+
+# aws ssm
+gem 'aws-sdk-ssm'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
