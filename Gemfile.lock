@@ -45,6 +45,7 @@ GEM
     activerecord (6.0.6.1)
       activemodel (= 6.0.6.1)
       activesupport (= 6.0.6.1)
+    activerecord-reset-pk-sequence (0.2.1)
     activestorage (6.0.6.1)
       actionpack (= 6.0.6.1)
       activejob (= 6.0.6.1)
@@ -67,6 +68,7 @@ GEM
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    hirb (0.7.3)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     listen (3.8.0)
@@ -164,10 +166,12 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  activerecord-reset-pk-sequence
   bootsnap (>= 1.4.2)
   byebug
+  hirb
   listen (~> 3.2)
-  pg
+  pg (~> 1.1)
   puma (~> 4.1)
   rails (~> 6.0.6, >= 6.0.6.1)
   spring
