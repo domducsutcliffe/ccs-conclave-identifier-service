@@ -10,7 +10,6 @@ gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 #Postgres DB
-gem 'activerecord-postgis-adapter'
 gem 'pg', '~> 1.1'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
