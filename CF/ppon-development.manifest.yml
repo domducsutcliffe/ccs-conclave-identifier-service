@@ -1,0 +1,14 @@
+---
+applications:
+- name: conclave-identifier-service-ppon-development
+  memory: 512M
+  buildpacks:
+    - https://github.com/cloudfoundry/ruby-buildpack.git#v1.8.60
+  instances: 1
+  random-route: true
+  routes:
+    - route: conclave-identifier-service-ppon-development.apps.internal
+  services:
+    - ppon-pg-service
+  env:
+    SERVER_ENV_NAME: ppon-development
