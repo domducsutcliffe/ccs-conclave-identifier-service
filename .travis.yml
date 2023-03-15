@@ -7,7 +7,7 @@ env:
     - API_ROOT=$API_ENDPOINT
   global:
     - CF_USER=$DEPLOY_USERNAME
-    - CF_ORG=ccs-conclave-cii
+    - CF_ORG=$DEPLOY_ORG
     - CF_PASS=$DEPLOY_PASSWORD
     - CF_SPACE=$SPACE
 services:
