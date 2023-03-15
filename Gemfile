@@ -10,6 +10,7 @@ gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 #Postgres DB
+gem 'activerecord-postgis-adapter'
 gem 'pg', '~> 1.1'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -31,11 +32,13 @@ gem 'rack-cors'
 # aws ssm
 gem 'aws-sdk-ssm'
 
+#Database helpers
+gem 'hirb'
+gem 'activerecord-reset-pk-sequence'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'hirb'
-  gem 'activerecord-reset-pk-sequence' 
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw] 
 end
 
 group :development do

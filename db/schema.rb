@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 2023_03_15_114134) do
   enable_extension "postgis"
 
   create_table "organisations", force: :cascade do |t|
-    t.string "ORG_ID"
     t.string "PPON_ID"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
