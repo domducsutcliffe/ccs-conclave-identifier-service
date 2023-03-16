@@ -12,9 +12,9 @@ module Api
       end
 
       def create
-        organisation = Organisation.new(PPON_ID: generate_specific_ppon_id(Organisation.count + 1))
+        organisation = Organisation.new(ppon_id: generate_specific_ppon_id(Organisation.count + 1))
         if organisation.save
-          render json: organisation.PPON_ID, status: :ok
+          render json: organisation.ppon_id, status: :ok
           organisation.save
         else
           render json: { status: 'ERROR', message: 'Organisation not saved', data: organisation.errors }, status: :unprocessable_entity
