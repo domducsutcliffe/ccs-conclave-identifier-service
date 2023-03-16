@@ -4,13 +4,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.0.6', '>= 6.0.6.1'
+gem 'rails', '~> 6.1.7', '>= 6.1.7.3'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 #Postgres DB
-gem 'activerecord-postgis-adapter'
+gem 'activerecord-postgis-adapter', '>= 7.0.0'
 gem 'pg', '~> 1.1'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
