@@ -10,16 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_15_114134) do
+ActiveRecord::Schema.define(version: 2023_03_16_134130) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "postgis"
 
   create_table "organisations", force: :cascade do |t|
-    t.string "PPON_ID"
+    t.string "ppon_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["ppon_id"], name: "index_organisations_on_ppon_id", unique: true
+    t.index ["ppon_id"], name: "organisation_ppon_id_idx", unique: true
   end
 
 end
