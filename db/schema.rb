@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(version: 2023_03_15_114134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "postgis"
 
   create_table "organisations", force: :cascade do |t|
     t.string "PPON_ID"
