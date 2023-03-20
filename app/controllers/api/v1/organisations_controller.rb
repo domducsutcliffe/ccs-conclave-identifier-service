@@ -14,8 +14,13 @@ module Api
       def create
         organisation = Organisation.new(ppon_id: generate_specific_ppon_id(Organisation.count + 1))
         if organisation.save
-          render json: organisation.ppon_id, status: :ok
-          organisation.save
+          render json: identifiers = [
+            {
+            "id": organisation.ppon_id,
+            "id-type": "PPON_ID",
+            "persisted": true
+            }
+            ], status: :ok
         else
           render json: { status: 'ERROR', message: 'Organisation not saved', data: organisation.errors }, status: :unprocessable_entity
         end
