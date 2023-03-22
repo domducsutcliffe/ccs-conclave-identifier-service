@@ -32,9 +32,10 @@ gem 'rack-cors'
 # aws ssm
 gem 'aws-sdk-ssm'
 
-#Database helpers
+# Database helpers
 gem 'hirb'
 gem 'activerecord-reset-pk-sequence'
+gem 'database_cleaner', '~> 1.5', '>= 1.5.3' 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -50,7 +51,6 @@ group :development do
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
   gem 'rubocop-performance'
-  gem 'database_cleaner', '~> 1.5', '>= 1.5.3' 
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
