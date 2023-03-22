@@ -1,14 +1,17 @@
 module Api
   module V1
     class OrganisationsController < ApplicationController
+      include Authorize::Token
+      before_action :validate_api_key
+
       def create
         organisation = Organisation.new(ppon_id: generate_specific_ppon_id(Organisation.count + 1))
         if organisation.save
-          render json:[ identifiers:
-            {
-            "id": organisation.ppon_id,
-            "id-type": "PPON_ID",
-            "persisted": true
+          render json: [
+            identifiers: {
+              "id": organisation.ppon_id,
+              "id-type": "PPON_ID",
+              "persisted": true
             }
             ], status: :ok
         else
