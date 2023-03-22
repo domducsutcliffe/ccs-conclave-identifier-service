@@ -4,4 +4,5 @@ Rails.application.routes.draw do
       match '/ppon', to: 'organisations#create', via: [:get]
     end
   end
+  get '*unmatched_route', to: 'application#not_found'
 end
