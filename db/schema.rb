@@ -15,19 +15,18 @@ ActiveRecord::Schema.define(version: 2023_03_22_155542) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "organisations", force: :cascade do |t|
-    t.string "ppon_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["ppon_id"], name: "index_organisations_on_ppon_id", unique: true
-  end
-
   create_table "clients", id: :serial, force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.string "api_key", limit: 255
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
- end
+  end
+
+  create_table "organisations", force: :cascade do |t|
+    t.string "ppon_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.index ["ppon_id"], name: "index_organisations_on_ppon_id", unique: true
+  end
 
 end

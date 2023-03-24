@@ -1,5 +1,5 @@
-module Api
-  module V1
+module Identifiers
+  module Id
     class OrganisationsController < ApplicationController
       include Authorize::Token
       before_action :validate_api_key
