@@ -2,7 +2,7 @@ module Identifiers
   module Id
     class OrganisationsController < ApplicationController
       include Authorize::Token
-      # before_action :validate_api_key
+      before_action :validate_api_key
 
       def create
         organisation = Organisation.new(ppon_id: generate_specific_ppon_id(Organisation.count + 1))
