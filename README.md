@@ -94,6 +94,10 @@ For help or guidance in downloading and running the application, see the followi
   ```sh
   rails s
   ```
+ Optional: Disable authorisation by commenting out before_validation line in app/contollers/identifiers/id/organisations_controller.rb
+  ```sh
+  #before_action :validate_api_key
+  ```
 
 <br><hr><br>
 
