@@ -1,10 +1,7 @@
 <!-- PROJECT SHIELDS -->
-[![Workflow][workflow-shield]][workflow-url]
-[![Issues][issues-shield]][issues-url]
-[![Version][version-shield]][version-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Forks][forks-shield]][forks-url]
-[![Contributors][contributors-shield]][contributors-url]
+<img alt="GitHub issues" src="https://img.shields.io/github/issues/Crown-Commercial-Service/ccs-conclave-identifier-service">[![Version][version-shield]][version-url]
+<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Crown-Commercial-Service/ccs-conclave-identifier-service">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Crown-Commercial-Service/ccs-conclave-identifier-service">
 
 
 
@@ -14,16 +11,10 @@
   <a href="https://github.com/Crown-Commercial-Service">
     Crown-Commercial-Service
   </a><br><br>
-  <div align="center"><h1>Conclave Identifier Service</h1>A ruby rails powered API</div>
+  <div align="center"><h1>Conclave Identifier Service</h1>A Ruby on Rails-powered API</div>
   <div align="right">
     <br>
-    <a href="https://github.com/Crown-Commercial-Service/ccs-conclave-identifier-service/blob/develop/README.md"><strong>Documentation »</strong></a>
-    <br>
-    <a href="#usage">View Usage</a>
-    ·
-    <a href="https://github.com/Crown-Commercial-Service/ccs-conclave-identifier-service/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Crown-Commercial-Service/ccs-conclave-identifier-service/issues">Request Feature</a>
+    <a href="https://github.com/Crown-Commercial-Service/ccs-conclave-identifier-service/issues">Report Bug or Request a Feature</a>
   </div>
 </div>
 
