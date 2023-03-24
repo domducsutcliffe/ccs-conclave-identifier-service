@@ -85,7 +85,12 @@ For help or guidance in downloading and running the application, see the followi
   ```sh
   bundle install
   ```
-3. Start:
+3. Create, migrate and seed the database:
+  ```sh
+  bundle exec rake db:setup
+
+  ```
+4. Start:
   ```sh
   rails s
   ```
@@ -99,24 +104,9 @@ For help or guidance in downloading and running the application, see the followi
 
 | Endpoint | Action/Desc. | Full URI <i>(hosted locally, for some port; e.g.: 3000)</i> | Request Type |
 |:---|:---|:---|:---|
-| <ul><li>"/"</li></ul> | Index:<br>Returns empty 200 status response. | <ul><li>"http://localhost:3000/"</li></ul> | GET |
+| <ul><li>"identifiers/id/ppon"</li></ul> | Create:<br>Creates PPON Number and returns JSON payload. | <ul><li>"http://localhost:3000/"</li></ul> | POST |
 
 <br><hr><br>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-Below is a planned roadmap. See [open issues][issues-url] for any other proposed features or known issues, which may not be listed below.
-
-| Feature/Task/Bugfix | Details | Version <i>(if released)</i> | Notes |
-|:---|:---|:---|:---|
-| <i>Bug#1</i> | <i>Bug details...</i> | <i>0.0.1</i> | <i>example#1</i> |
-| <i>Feature#4</i> | <i>Feature details...</i> |   | <i>example#2</i> |
-
-<br><hr><br>
-
-
 
 <!-- CHANGELOG -->
 ## Changelog
@@ -133,11 +123,11 @@ Below is a planned roadmap. See [open issues][issues-url] for any other proposed
 <!-- CONTACT -->
 ### Contact
 
-<b>Tom Berey</b>; <i>Developer</i>;<br>thomas.berey@crowncommercialservice.gov.uk;
-<b>Dom Sutcliffe</b>; <i>Developer</i>;<br>dom.sutcliffe@crowncommercialservice.gov.uk;
-<b>Sam Boothroyd</b>; <i>Developer</i>;<br>sam.boothroyd@crowncommercialservice.gov.uk;
+<b>Tom Berey</b>; <i>Senoir Developer</i>;thomas.berey@crowncommercialservice.gov.uk;<br>
+<b>Dom Sutcliffe</b>; <i>Developer</i>;dom.sutcliffe@crowncommercialservice.gov.uk;<br>
+<b>Sam Boothroyd</b>; <i>Developer</i>;sam.boothroyd@crowncommercialservice.gov.uk;
 
-* [Issues & Requests][issues-url]
+
 * [CCS Projects](https://github.com/Crown-Commercial-Service?tab=repositories)
 * [CCS Website](https://www.crowncommercial.gov.uk/)
 
