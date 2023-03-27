@@ -127,7 +127,7 @@ For help or guidance in downloading and running the application, see the followi
 <!-- CONTACT -->
 ### Contact
 
-<b>Tom Berey</b>; <i>Senoir Developer</i>;thomas.berey@crowncommercialservice.gov.uk;<br>
+<b>Tom Berey</b>; <i>Lead Developer</i>;thomas.berey@crowncommercialservice.gov.uk;<br>
 <b>Dom Sutcliffe</b>; <i>Developer</i>;dom.sutcliffe@crowncommercialservice.gov.uk;<br>
 <b>Sam Boothroyd</b>; <i>Developer</i>;sam.boothroyd@crowncommercialservice.gov.uk;
 
