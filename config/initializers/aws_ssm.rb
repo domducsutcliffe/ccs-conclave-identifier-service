@@ -29,4 +29,4 @@ end
 # The following line means that AWS SSM Parameter Store will not be used locally, due to the conditional. You should use a `.env.local` file (do not push) to hold secrets stored in AWS, for local use.
 config_aws if ENV['SERVER_ENV_NAME'].present?
 
-ENV['SITE_24X7_KEY']
+
