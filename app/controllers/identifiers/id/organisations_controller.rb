@@ -13,7 +13,7 @@ module Identifiers
               "id-type": "PPON_ID",
               "persisted": true
             }
-            ], status: :ok
+            ], status: :created
         else
           render json: { status: 'ERROR', message: 'Organisation not saved', data: organisation.errors }, status: :unprocessable_entity
         end
