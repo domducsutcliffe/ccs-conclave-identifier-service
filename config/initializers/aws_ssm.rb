@@ -1,9 +1,10 @@
 require 'aws-sdk-ssm'
 
+
 private
 
 def config_aws
-	params_list = ['SITE_24X7_KEY']
+	params_list = ['SITE_24X7_KEY','ROLLBAR_ACCESS_TOKEN']
 	ssm_client = nil
 	vcap_services = JSON.parse(ENV['VCAP_SERVICES'])
 
@@ -28,5 +29,3 @@ end
 
 # The following line means that AWS SSM Parameter Store will not be used locally, due to the conditional. You should use a `.env.local` file (do not push) to hold secrets stored in AWS, for local use.
 config_aws if ENV['SERVER_ENV_NAME'].present?
-
-
