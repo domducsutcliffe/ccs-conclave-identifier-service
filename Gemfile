@@ -37,6 +37,8 @@ gem 'hirb'
 gem 'activerecord-reset-pk-sequence'
 gem 'database_cleaner', '~> 1.5', '>= 1.5.3' 
 
+#Error logging
+gem 'rollbar'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw] 
