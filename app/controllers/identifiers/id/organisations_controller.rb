@@ -11,7 +11,7 @@ module Identifiers
             identifiers: [
               {
               "id": organisation.ppon_id,
-              "id-type": "PPON_ID",
+              "id-type": "ppon-id",
               "persisted": true
               }
             ]
