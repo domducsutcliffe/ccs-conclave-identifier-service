@@ -201,6 +201,7 @@ GEM
       rubocop (~> 1.33)
       rubocop-capybara (~> 2.17)
     ruby-progressbar (1.13.0)
+    site24x7_apminsight (1.8.6)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -248,6 +249,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   rubocop-rspec
+  site24x7_apminsight
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)
