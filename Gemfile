@@ -13,6 +13,7 @@ gem 'puma', '~> 4.1'
 gem 'activerecord-postgis-adapter', '>= 7.0.0'
 gem 'pg', '~> 1.1'
 gem 'site24x7_apminsight'
+gem 'erb', '2.2.3'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
@@ -42,7 +43,8 @@ gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
 gem 'rollbar'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw] 
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'dotenv-rails'
 end
 
 group :development do

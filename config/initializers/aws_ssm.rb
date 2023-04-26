@@ -4,7 +4,7 @@ require 'aws-sdk-ssm'
 private
 
 def config_aws
-	params_list = ['SITE_24X7_KEY','ROLLBAR_ACCESS_TOKEN']
+	params_list = ['SITE_24X7_KEY','ROLLBAR_ACCESS_TOKEN', 'SITE_24X7_PORT', 'SITE_24X7_PROXY', 'ENVIRONMENT']
 	ssm_client = nil
 	vcap_services = JSON.parse(ENV['VCAP_SERVICES'])
 
