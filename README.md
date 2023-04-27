@@ -66,7 +66,7 @@ The Crown Commercial Service's Contingency ID Service, for Conclave/PPG. A servi
 
 <!-- SETUP -->
 ## Setup
-For help or guidance in downloading and running the application, see the following subsections.
+For help or guidance in downloading and running the application, see the following subsections
 <br>
 
 #### Prerequisites
