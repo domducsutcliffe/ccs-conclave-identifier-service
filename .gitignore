@@ -33,5 +33,5 @@
 .local.env
 .env.local
 
-#Ignore Site24x7
+# Ignore Site24x7
 apminsight.conf
