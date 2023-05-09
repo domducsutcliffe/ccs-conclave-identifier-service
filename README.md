@@ -1,10 +1,7 @@
 <!-- PROJECT SHIELDS -->
-[![Workflow][workflow-shield]][workflow-url]
-[![Issues][issues-shield]][issues-url]
-[![Version][version-shield]][version-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Forks][forks-shield]][forks-url]
-[![Contributors][contributors-shield]][contributors-url]
+<img alt="GitHub issues" src="https://img.shields.io/github/issues/Crown-Commercial-Service/ccs-conclave-identifier-service">[![Version][version-shield]][version-url]
+<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Crown-Commercial-Service/ccs-conclave-identifier-service">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Crown-Commercial-Service/ccs-conclave-identifier-service">
 
 
 
@@ -12,18 +9,12 @@
 <br>
 <div align="center">
   <a href="https://github.com/Crown-Commercial-Service">
-    Crown-Commercial-Service :)
+    Crown-Commercial-Service
   </a><br><br>
-  <div align="center"><h1>Conclave Identifier Service</h1>A ruby rails powered API</div>
+  <div align="center"><h1>Conclave Identifier Service</h1>A Ruby on Rails-powered API</div>
   <div align="right">
     <br>
-    <a href="https://github.com/Crown-Commercial-Service/ccs-conclave-identifier-service/blob/develop/README.md"><strong>Documentation »</strong></a>
-    <br>
-    <a href="#usage">View Usage</a>
-    ·
-    <a href="https://github.com/Crown-Commercial-Service/ccs-conclave-identifier-service/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Crown-Commercial-Service/ccs-conclave-identifier-service/issues">Request Feature</a>
+    <a href="https://github.com/Crown-Commercial-Service/ccs-conclave-identifier-service/issues">Report Bug or Request a Feature</a>
   </div>
 </div>
 
@@ -94,9 +85,18 @@ For help or guidance in downloading and running the application, see the followi
   ```sh
   bundle install
   ```
-3. Start:
+3. Create, migrate and seed the database:
+  ```sh
+  bundle exec rake db:setup
+
+  ```
+4. Start:
   ```sh
   rails s
+  ```
+ Optional: Disable authorisation by commenting out before_validation line in app/contollers/identifiers/id/organisations_controller.rb
+  ```sh
+  #before_action :validate_api_key
   ```
 
 <br><hr><br>
@@ -108,24 +108,9 @@ For help or guidance in downloading and running the application, see the followi
 
 | Endpoint | Action/Desc. | Full URI <i>(hosted locally, for some port; e.g.: 3000)</i> | Request Type |
 |:---|:---|:---|:---|
-| <ul><li>"/"</li></ul> | Index:<br>Returns empty 200 status response. | <ul><li>"http://localhost:3000/"</li></ul> | GET |
+| <ul><li>"identifiers/id/ppon"</li></ul> | Create:<br>Creates PPON Number and returns JSON payload. | <ul><li>"http://localhost:3000/"</li></ul> | POST |
 
 <br><hr><br>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-Below is a planned roadmap. See [open issues][issues-url] for any other proposed features or known issues, which may not be listed below.
-
-| Feature/Task/Bugfix | Details | Version <i>(if released)</i> | Notes |
-|:---|:---|:---|:---|
-| <i>Bug#1</i> | <i>Bug details...</i> | <i>0.0.1</i> | <i>example#1</i> |
-| <i>Feature#4</i> | <i>Feature details...</i> |   | <i>example#2</i> |
-
-<br><hr><br>
-
-
 
 <!-- CHANGELOG -->
 ## Changelog
@@ -142,31 +127,15 @@ Below is a planned roadmap. See [open issues][issues-url] for any other proposed
 <!-- CONTACT -->
 ### Contact
 
-<b>Tom Berey</b>; <i>Developer</i>;<br>thomas.berey@crowncommercialservice.gov.uk;
+<b>Tom Berey</b>; <i>Lead Developer</i>;thomas.berey@crowncommercialservice.gov.uk;<br>
+<b>Dom Sutcliffe</b>; <i>Developer</i>;dom.sutcliffe@crowncommercialservice.gov.uk;<br>
+<b>Sam Boothroyd</b>; <i>Developer</i>;sam.boothroyd@crowncommercialservice.gov.uk;
 
-* [Issues & Requests][issues-url]
+
 * [CCS Projects](https://github.com/Crown-Commercial-Service?tab=repositories)
 * [CCS Website](https://www.crowncommercial.gov.uk/)
 
 <br>
-
-<br>
-
-<i>
-
-### Outstanding Questions:
-
-#### 1) Endpoint is now POST, from GET.
-
-#### 2) id-type is now id_type.
-
-#### 3) Capitalize id_type, so 'CCS-123456'.
-
-#### 4) What defines 'persisted' as either true/false?
-
-#### 5) How are the batch (count = 5) identifiers connected/being used? All to one organization? etc.
-
-</i>
 
 <br>
 

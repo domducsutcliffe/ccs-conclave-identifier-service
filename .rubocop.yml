@@ -1,9 +1,7 @@
 require: 
-  - rubocop/cop/internal_affairs
+  - rubocop-rspec
   - rubocop-performance
   - rubocop-rails
-  - rubocop-rspec # or rubocop-minitest
-  - rubocop-rake
 AllCops:
   NewCops: enable
   Exclude:
@@ -80,7 +78,7 @@ Metrics/AbcSize:
 Layout/LineLength:
     Max: 120
     Enabled: false
-    IgnoredPatterns:
+    AllowedPatterns:
         - 'it .* do$'
         - 'context .* do$'
         - 'scenario .* do$'

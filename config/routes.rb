@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get "/identifiers/id/:id_type", to: "ppon_identifier#index"
-
-  namespace :testing do
-    get "/ppon_get_first", to: "testing#return_first_ppon_id"
-    get "/ppon_get/:index", to: "testing#return_specific_ppon_id"
+  namespace 'identifiers' do
+    namespace 'id' do
+      match '/ppon', to: 'organisations#create', via: [:post]
+    end
   end
+  post '*unmatched_route', to: 'application#not_found'
 end
