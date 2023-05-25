@@ -44,8 +44,8 @@ end
 def set_env(ssm_client, params_list)
     params_list.each do |param_name|
         response = ssm_client.get_parameter({ name: "#{param_name}", with_decryption: true})
-        env_param_name = param_name.gsub("/identifier-service/", "")
-        ENV[env_param_name] = response.parameter.value
+        env_param_name = param_name.gsub("/identifier-service/", "").to_s
+        ENV[env_param_name.upcase] = response.parameter.value
     end
 end 
 
